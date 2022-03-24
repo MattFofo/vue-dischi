@@ -6,7 +6,6 @@
 </template>
 
 <script>
-import 'axios';
 import HeaderDischi from './components/HeaderDischi.vue';
 import MainDischi from './components/MainDischi.vue';
 
