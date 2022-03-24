@@ -1,16 +1,18 @@
 <template>
   <div class="card-disco">
-    <img src="https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg" alt="">
-    <h3>titolo</h3>
-    <h4>autore</h4>
-    <h4>anno</h4>
+    <img :src="cardData.poster" :alt="cardData.title">
+    <h3>{{ cardData.title }}</h3>
+    <h4>{{ cardData.author }}</h4>
+    <h4>{{ cardData.year }}</h4>
   </div>
 </template>
 
 <script>
 export default {
   name: 'CardDisco',
-  // props: [cardData],
+  props: {
+    cardData: Object,
+  },
 };
 </script>
 

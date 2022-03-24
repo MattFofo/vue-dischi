@@ -1,6 +1,7 @@
 <template>
   <main>
-    <CardDisco card-poster= "" card-data="" card-title="" card-author="" card-year="" />
+    <div v-if="arrCards == null">Loading Data</div>
+    <CardDisco v-for="card in arrCards" :key="card.id" :card-data="card" />
   </main>
 </template>
 
@@ -13,11 +14,18 @@ export default {
   components: {
     CardDisco,
   },
+  data() {
+    return {
+      arrCards: null,
+    };
+  },
   created() {
     axios.get('https://flynn.boolean.careers/exercises/api/array/music')
       .then((response) => {
-        console.log(response.data.response);
+        this.arrCards = response.data.response;
+        console.log(this.arrCards);
       });
+    // console.log(this.arrCards);
   },
 };
 </script>
