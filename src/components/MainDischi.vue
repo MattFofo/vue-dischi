@@ -1,7 +1,7 @@
 <template>
   <main>
-    <div class="container">
-      <div class="row justify-content-center">
+    <div class="container py-5">
+      <div class="row justify-content-center row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6">
         <div v-if="arrCards == null">Loading Data</div>
         <CardDisco v-for="card in arrCards" :key="card.id" :card-data="card" />
       </div>

@@ -1,9 +1,9 @@
 <template>
-  <div class="card-disco col-6 col-md-4 col-lg-2 m-2">
+  <div class="card-disco m-3">
     <img class="img-fluid" :src="cardData.poster" :alt="cardData.title">
-    <h3>{{ cardData.title }}</h3>
-    <h4>{{ cardData.author }}</h4>
-    <h4>{{ cardData.year }}</h4>
+    <h3 class="text-center">{{ cardData.title }}</h3>
+    <h4 class="text-center">{{ cardData.author }}</h4>
+    <h4 class="text-center">{{ cardData.year }}</h4>
   </div>
 </template>
 
