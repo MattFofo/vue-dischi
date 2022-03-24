@@ -18,7 +18,7 @@ header {
   background-color: rgb(46,58,70);
   .fa-spotify {
     font-size: 3rem;
-    color: green;
+    color: #1ED760;
   }
 }
 

@@ -1,7 +1,7 @@
 <template>
-  <div class="card-disco m-3 p-4">
+  <div class="card-disco bg-secondary m-3 p-4">
     <img class="img-fluid" :src="cardData.poster" :alt="cardData.title">
-    <h3 class="text-center">{{ cardData.title }}</h3>
+    <h3 class="text-center py-2">{{ cardData.title }}</h3>
     <h4 class="text-center">{{ cardData.author }}</h4>
     <h4 class="text-center">{{ cardData.year }}</h4>
   </div>
@@ -18,12 +18,14 @@ export default {
 
 <style scoped lang="scss">
   .card-disco{
-    background-color: rgb(46,58,70);
     h3 {
       color: white;
+      line-height: 1;
     }
     h4 {
       color: rgb(110,122,124);
+      line-height: .8;
+      font-size: 1.1rem;
     }
   }
 
