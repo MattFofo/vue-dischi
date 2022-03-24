@@ -1,7 +1,12 @@
 <template>
   <main>
-    <div v-if="arrCards == null">Loading Data</div>
-    <CardDisco v-for="card in arrCards" :key="card.id" :card-data="card" />
+    <div class="container">
+      <div class="row justify-content-center">
+        <div v-if="arrCards == null">Loading Data</div>
+        <CardDisco v-for="card in arrCards" :key="card.id" :card-data="card" />
+      </div>
+    </div>
+
   </main>
 </template>
 
@@ -23,13 +28,14 @@ export default {
     axios.get('https://flynn.boolean.careers/exercises/api/array/music')
       .then((response) => {
         this.arrCards = response.data.response;
-        console.log(this.arrCards);
       });
-    // console.log(this.arrCards);
   },
 };
 </script>
 
-<style>
+<style scoped lang="scss">
+  main {
+    background-color: rgb(30,45,59);
+  }
 
 </style>
