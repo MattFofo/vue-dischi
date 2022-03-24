@@ -1,5 +1,5 @@
 <template>
-  <div class="card-disco m-3">
+  <div class="card-disco m-3 p-4">
     <img class="img-fluid" :src="cardData.poster" :alt="cardData.title">
     <h3 class="text-center">{{ cardData.title }}</h3>
     <h4 class="text-center">{{ cardData.author }}</h4>
