@@ -1,12 +1,15 @@
 <template>
   <header>
     <div class="container-fluid">
-      <i class="fa-brands fa-spotify py-3"></i>
+      <div class="row row-cols-2 justify-space-between">
+        <i class="fa-brands fa-spotify py-3"></i>
+      </div>
     </div>
   </header>
 </template>
 
 <script>
+
 export default {
   name: 'HeaderDischi',
 };
