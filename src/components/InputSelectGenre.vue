@@ -2,10 +2,11 @@
   <form class="d-flex justify-content-end align-items-center" action="">
     <label for="select-genre">
       seleziona il genere
-      <select v-model="genre" name="select-genre" id="select-genre">
+      <select v-model="genre" name="select-genre" id="select-genre"
+      @change="$emit('genre-selected', genre)">
         <option v-for="card in cardsData"
         :key="card.poster"
-        :value="card.genre" @change="$emit('genre-selected', genre)">
+        :value="card.genre">
         {{ card.genre }}
         </option>
       </select>
