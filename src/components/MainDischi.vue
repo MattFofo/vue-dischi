@@ -1,10 +1,11 @@
 <template>
   <main class="bg-primary">
     <div class="container py-5">
-      <InputSelectGenre @genre-selected="filterByGenre()" :cards-data="arrCards" />
+      <InputSelectGenre @genre-selected="(genre) => filterByGenre(genre)" :cards-data="arrCards"
+      v-model="genre" />
       <div class="row justify-content-center row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-6">
         <div v-if="arrCards == null" class="text-center">Missing Data</div>
-        <CardDisco v-model="genre" v-for="card in arrCards"
+        <CardDisco v-model="arrCards" v-for="card in arrCards"
         :key="card.id" :card-data="card" />
       </div>
     </div>
@@ -30,8 +31,9 @@ export default {
     };
   },
   methods: {
-    filterByGenre() {
-      this.arrCards = this.arrCards.filter((objCard) => objCard.genre.includes('Jazz'));
+    filterByGenre(genre) {
+      this.genre = genre;
+      this.arrCards = this.arrCards.filter((objCard) => objCard.genre.includes(genre));
     },
   },
   created() {
