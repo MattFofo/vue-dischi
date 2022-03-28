@@ -5,10 +5,10 @@
       <select v-model="genre" name="select-genre" id="select-genre"
       @change="$emit('genre-selected', genre)">
         <option value="">All</option>
-        <option v-for="card in cardsData"
-        :key="card.poster"
-        :value="card.genre">
-        {{ card.genre }}
+        <option v-for="card in filterGenres()"
+        :key="card"
+        :value="card">
+        {{ card }}
         </option>
       </select>
     </label>
@@ -27,8 +27,8 @@ export default {
     };
   },
   methods: {
-    getArrGenres() {
-      this.cardsData.forEach((element) => { this.arrGenres.push(element.genre); });
+    filterGenres() {
+      return [...new Set(this.cardsData.map((element) => element.genre))];
     },
   },
 };

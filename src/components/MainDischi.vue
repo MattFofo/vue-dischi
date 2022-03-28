@@ -27,7 +27,7 @@ export default {
   data() {
     return {
       genre: '',
-      arrCards: null,
+      arrCards: [],
       arrCardsFiltered: [],
     };
   },
