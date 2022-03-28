@@ -4,6 +4,7 @@
       seleziona il genere
       <select v-model="genre" name="select-genre" id="select-genre"
       @change="$emit('genre-selected', genre)">
+        <option value="">All</option>
         <option v-for="card in cardsData"
         :key="card.poster"
         :value="card.genre">
