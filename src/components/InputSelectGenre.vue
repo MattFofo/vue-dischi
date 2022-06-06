@@ -5,10 +5,10 @@
       <select v-model="genre" name="select-genre" id="select-genre"
       @change="$emit('genre-selected', genre)">
         <option value="">All</option>
-        <option v-for="card in filterGenres()"
-        :key="card"
-        :value="card">
-        {{ card }}
+        <option v-for="option in filterGenres()"
+        :key="option"
+        :value="option">
+        {{ option }}
         </option>
       </select>
     </label>
